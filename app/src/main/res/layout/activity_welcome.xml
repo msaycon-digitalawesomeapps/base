@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_welcome_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome"
+    tools:theme="@style/Theme.Exclusive">
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/da_components_spacing_extreme_large_2"
+        android:layout_marginTop="@dimen/da_components_spacing_small"
+        android:text="@string/welcome_tagline"
+        android:textAlignment="center"
+        android:textColor="@color/purple_400"
+        android:textSize="@dimen/da_components_text_size_16_sp"
+        app:da_components_fontType="primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_app_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+        android:id="@+id/bt_getStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/da_components_spacing_large"
+        android:scaleType="centerCrop"
+        app:da_components_label="Get Started"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

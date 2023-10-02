@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Clear Choice</string>
+
+    <string name="signup_tos">By signing up, I agree to Clear Choice\'s</string>
+    <string name="lbl_privacy">Privacy Policy</string>
+    <string name="lbl_and">and</string>
+    <string name="lbl_terms_service">Terms of Service.</string>
+    <string name="welcome_tagline">Make Clear Choice your first choice for cannabis.</string>
+    <string name="lbl_no">No</string>
+    <string name="lbl_location_access">Location Access</string>
+    <string name="lbl_location_desc">Google Play Store requires that we check that you are in a legal state before we continue.\n\nPlease enable location services to use the app. We use your location to verify that you\'re in a state where cannabis is legal.</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="lbl_not_member">Not a member?</string>
+    <string name="lbl_sign_up">Sign Up</string>
+    <string name="lbl_register">Register</string>
+    <string name="lbl_first_name">First Name</string>
+    <string name="lbl_last_name">Last Name</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_state">State</string>
+    <string name="lbl_confirm_pass">Confirm Password</string>
+    <string name="lbl_referal_code">Referral Code</string>
+    <string name="lbl_already_member">Already a Member?</string>
+    <string name="lbl_opt_news">Opt in to our Newsletter(Not Required)</string>
+    <string name="lbl_opt_text">Opt in to our Text Deals(Not Required)</string>
+    <string name="lbl_reset_password">Reset Password</string>
+    <string name="lbl_reset_password_desc">Enter your registered email below to receive password reset instruction.</string>
+    <string name="lbl_remember_pass">You remember your password?</string>
+    <string name="lbl_create_password">Create New Password</string>
+    <string name="lbl_create_password_desc">Enter the email verification code below to reset your password.</string>
+    <string name="lbl_code_not_received">Didn’t receive code?</string>
+    <string name="lbl_resend">Resend</string>
+    <string name="lbl_send_code">Send Verification Code</string>
+    <string name="version_format">v %1$s</string>
+    <string name="lbl_sort">Sort</string>
+    <string name="lbl_thc">THC%</string>
+    <string name="lbl_cbd">CBD%</string>
+    <string name="lbl_price">Price</string>
+    <string name="lbl_your_points">"Your points: "</string>
+    <string name="lbl_completed">Completed</string>
+    <string name="lbl_next_reward">Next reward:</string>
+    <string name="lbl_redeem">Redeem</string>
+    <string name="lbl_details">Details</string>
+    <string name="lbl_remove">Remove</string>
+</resources>

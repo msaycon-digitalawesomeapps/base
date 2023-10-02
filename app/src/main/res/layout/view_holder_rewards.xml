@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="percent"
+            type="String" />
+
+        <variable
+            name="nextReward"
+            type="String" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cv_avatar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="@dimen/default_view_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/da_components_spacing_normal">
+
+            <LinearLayout
+                android:id="@+id/v_points_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded"
+                android:orientation="horizontal"
+                android:padding="@dimen/da_components_spacing_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_your_points"
+                    android:textSize="@dimen/da_components_text_size_16_sp"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="semi_bold" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/da_components_text_color_link"
+                    android:textSize="@dimen/da_components_text_size_16_sp"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold"
+                    tools:text="11pts" />
+            </LinearLayout>
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/tv_percent_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_large"
+                android:text="@{percent}"
+                android:textColor="@color/primary_accent"
+                app:da_components_fontType="primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_points_container"
+                tools:text="12%" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/da_components_spacing_very_small"
+                android:layout_marginTop="@dimen/da_components_spacing_large"
+                android:text="@string/lbl_completed"
+                app:da_components_fontType="primary"
+                app:layout_constraintStart_toEndOf="@+id/tv_percent_completed"
+                app:layout_constraintTop_toBottomOf="@+id/v_points_container" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/tv_next_reward_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_large"
+                android:text="@{nextReward}"
+                android:textColor="@color/primary_accent"
+                app:da_components_fontType="primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_points_container"
+                tools:text="91pts" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_large"
+                android:layout_marginEnd="@dimen/da_components_spacing_very_small"
+                android:text="@string/lbl_next_reward"
+                app:layout_constraintEnd_toStartOf="@+id/tv_next_reward_points"
+                app:layout_constraintTop_toBottomOf="@+id/v_points_container" />
+
+            <ProgressBar
+                android:id="@+id/v_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="@dimen/da_components_spacing_small"
+                android:indeterminateTint="@color/da_components_text_color_link"
+                android:progress="12"
+                android:progressTint="@color/da_components_text_color_link"
+                android:progressTintMode="src_in"
+                android:theme="@style/Theme.Exclusive.Blue"
+                app:layout_constraintTop_toBottomOf="@+id/tv_percent_completed" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+                android:id="@+id/bt_redeem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:layout_marginEnd="4dp"
+                android:theme="@style/Theme.Exclusive.Blue"
+                app:da_components_label="@string/lbl_redeem"
+                app:layout_constraintEnd_toStartOf="@+id/bt_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_progress" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.SecondaryButton
+                android:id="@+id/bt_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:theme="@style/Theme.Exclusive.Blue"
+                app:da_components_label="@string/lbl_details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bt_redeem"
+                app:layout_constraintTop_toBottomOf="@+id/v_progress" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

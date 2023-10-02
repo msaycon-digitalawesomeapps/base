@@ -1,0 +1,71 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="description"
+            type="String" />
+
+        <variable
+            name="originalPrice"
+            type="String" />
+
+        <variable
+            name="finalPrice"
+            type="String" />
+
+        <variable
+            name="shopName"
+            type="String" />
+
+        <variable
+            name="type"
+            type="String" />
+
+        <variable
+            name="cbd"
+            type="String" />
+
+        <variable
+            name="thc"
+            type="String" />
+
+        <variable
+            name="isDiscounted"
+            type="Boolean" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/v_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="@dimen/da_components_text_size_12_sp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:chipMinHeight="30dp"
+        app:chipStrokeColor="@color/black"
+        app:chipStrokeWidth="1dp"
+        app:chipCornerRadius="@dimen/da_components_spacing_very_small"
+        app:chipMinTouchTargetSize="0dp"
+        tools:text="@tools:sample/us_zipcodes"
+        style="@style/Theme.Exclusive.Chips" />
+
+</layout>

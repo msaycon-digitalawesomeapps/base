@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="category"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/guardingMainConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingVertical="@dimen/da_components_spacing_normal">
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@{category}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:da_components_fontType="primary"
+            app:da_components_textWeight="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Best Selling" />
+
+        <com.digitalawesome.dispensary.components.views.atoms.buttons.Link
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:onClick="@{onClick}"
+            android:text="View All"
+            android:textSize="18sp"
+            app:da_components_fontType="primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="View All" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@+id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.digitalawesome.clearchoice.auth.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/signup"
+            app:popUpTo="@id/login"
+            app:popUpToSaveState="@id/login"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_login_to_forgot_password"
+            app:destination="@id/forgot_password"
+            app:popUpTo="@id/login"
+            app:popUpToSaveState="@id/login"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.digitalawesome.clearchoice.auth.login.signup.SignupFragment"
+        android:label="Signup"
+        tools:layout="@layout/fragment_signup" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgot_password"
+        android:name="com.digitalawesome.clearchoice.auth.login.forgotpassword.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" >
+    </fragment>
+</navigation>

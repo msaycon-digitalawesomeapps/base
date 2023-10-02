@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="age_dialog_icon">140dp</dimen>
+    <dimen name="input_label">10sp</dimen>
+    <dimen name="default_view_radius">20dp</dimen>
+    <dimen name="chip_stroke_width">1dp</dimen>
+
+    <dimen name="product_image_radius">16dp</dimen>
+    <dimen name="product_view_radius">20dp</dimen>
+    <dimen name="product_order_radius">10dp</dimen>
+    <dimen name="product_original_price_text_size">10sp</dimen>
+
+    <dimen name="inset_size_vertical">45dp</dimen>
+    <dimen name="inset_size_horizontal">45dp</dimen>
+</resources>

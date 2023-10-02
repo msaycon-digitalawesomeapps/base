@@ -1,0 +1,199 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="weight"
+            type="String" />
+
+        <variable
+            name="description"
+            type="String" />
+
+        <variable
+            name="originalPrice"
+            type="String" />
+
+        <variable
+            name="finalPrice"
+            type="String" />
+
+        <variable
+            name="shopName"
+            type="String" />
+
+        <variable
+            name="type"
+            type="String" />
+
+        <variable
+            name="isDiscounted"
+            type="Boolean" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quantity_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/da_components_spacing_small"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="0dp"
+        android:onClick="@{onClick}"
+        app:cardBackgroundColor="@color/product_order_background_color"
+        app:cardCornerRadius="@dimen/product_order_radius"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        tools:cardCornerRadius="4dp"
+        tools:theme="@style/Theme.Exclusive">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="@dimen/product_image_radius">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_product_image"
+                    bind:srcUrl="@{image}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/da_components_spacing_very_small" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/da_components_spacing_small">
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{title}"
+                    android:textColor="?attr/da_components_themeListingCardProductNameTextColor"
+                    android:textSize="@dimen/da_components_text_size_14_sp"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1:1 Milk Chocolate [10pk] (100mg) Other Product Name Here" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_final_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_components_spacing_very_small"
+                    android:ellipsize="end"
+                    android:text="@{finalPrice}"
+                    android:textColor="?attr/da_components_themeListingCardProductFinalPriceTextColor"
+                    android:textSize="?attr/da_components_themeListingCardProductFinalPriceTextSize"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_weight"
+                    tools:text="$100" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_very_small"
+                    android:layout_marginTop="@dimen/da_components_spacing_very_small"
+                    android:ellipsize="end"
+                    android:paddingHorizontal="2dp"
+                    android:text="@{originalPrice}"
+                    android:textColor="?attr/da_components_themeListingCardProductOriginalPriceTextColor"
+                    android:textSize="?attr/da_components_themeListingCardProductOriginalPriceTextSize"
+                    android:visibility="@{isDiscounted ? View.VISIBLE : View.GONE}"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_product_final_price"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_weight"
+                    tools:text="$100" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="?da_components_themeListingCardProductOriginalPriceTextColor"
+                    android:visibility="@{isDiscounted ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_product_original_price"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_product_original_price"
+                    app:layout_constraintStart_toStartOf="@id/tv_product_original_price"
+                    app:layout_constraintTop_toTopOf="@id/tv_product_original_price" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.controls.QuantityInput
+                    android:id="@+id/qi_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_product_final_price" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/qi_quantity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/qi_quantity"
+                    app:srcCompat="@drawable/ic_remove" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_components_spacing_very_small"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="2dp"
+                    android:text="@{weight}"
+                    android:textColor="?attr/da_components_themeListingCardProductOriginalPriceTextColor"
+                    android:textSize="@dimen/product_original_price_text_size"
+                    app:da_components_fontType="primary"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_product_name"
+                    tools:text="Weight: 0.94g" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

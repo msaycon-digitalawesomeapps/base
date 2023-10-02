@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_statelist"
+        android:title="Home"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/stores_with_search"
+        android:icon="@drawable/ic_shop_statelist"
+        android:title="Stores"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/blogs"
+        android:icon="@drawable/ic_reward_statelist"
+        android:title="Rewards"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/promotions"
+        android:icon="@drawable/ic_discount_statelist"
+        android:title="Deals"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/ic_account_statelist"
+        android:title="Account"
+        app:showAsAction="withText" />
+
+</menu>

@@ -1,0 +1,149 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="address"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="status"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onDirectionsClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onChatClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onCallClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quantity_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/da_components_spacing_small"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:onClick="@{onClick}"
+        app:cardBackgroundColor="@color/purple_100"
+        app:cardCornerRadius="?attr/da_components_themeListingCardRadius"
+        app:cardPreventCornerOverlap="true"
+        tools:cardCornerRadius="20dp"
+        tools:theme="@style/Theme.Exclusive">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                bind:srcUrl="@{image}"/>
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/da_components_spacing_normal"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{title}"
+                android:textColor="?attr/da_components_themeListingCardProductNameTextColor"
+                android:textSize="@dimen/da_components_text_size_18_sp"
+                app:da_components_fontType="primary"
+                app:da_components_textWeight="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Coldwater" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/da_components_spacing_normal"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:gravity="start"
+                android:text="@{address}"
+                android:textColor="@color/purple_400"
+                android:textSize="@dimen/da_components_text_size_14_sp"
+                app:da_components_fontType="primary"
+                app:da_components_textWeight="bold"
+                app:drawableStartCompat="@drawable/ic_location_small"
+                app:drawableTint="@color/purple_300"
+                app:layout_constraintTop_toBottomOf="@id/tv_location"
+                tools:layout_editor_absoluteX="8dp"
+                tools:text="4.20 BAR MINIS (EACH) 10mg CDB/10mg Very Long Product Description" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/view_button_with_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_normal"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                    android:onClick="@{onDirectionsClick}"
+                    bind:icon="@{@drawable/ic_direction}"
+                    bind:text="@{`Directions`}" />
+
+                <include
+                    layout="@layout/view_button_with_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_small"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                    android:onClick="@{onChatClick}"
+                    bind:icon="@{@drawable/ic_chat_small}"
+                    bind:text="@{`Chat`}" />
+
+                <include
+                    layout="@layout/view_button_with_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_small"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                    android:onClick="@{onCallClick}"
+                    bind:icon="@{@drawable/ic_call}"
+                    bind:text="@{`Call`}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

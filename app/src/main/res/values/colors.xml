@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">#9B89B9</color>
+    <color name="secondaryColor">#584876</color>
+    <color name="colorAccent">#6B5F85</color>
+    <color name="secondaryDark">#604E7F</color>
+    <color name="colorAccentLight">#E2DDEC</color>
+
+    <color name="purple_200">#E1DAF0</color>
+    <color name="purple_100">#F9F4FF</color>
+    <color name="purple_300">#B9AFD0</color>
+    <color name="purple_400">#9B89B9</color>
+    <color name="purple_500">#604E7F</color>
+    <color name="purple_600">#584876</color>
+
+    <color name="primary_accent">#6B5F85</color>
+
+    <color name="toolbar_title_color">#352B47</color>
+    <color name="toolbar_background_color">#E1DAF0</color>
+
+    <color name="input_field_stroke_focus_color">@color/primary_accent</color>
+    <color name="input_field_stroke_color">@color/purple_200</color>
+    <color name="input_field_text_color">@color/black</color>
+    <color name="input_field_label_color">@color/primary_accent</color>
+    <color name="input_hint_color">@color/purple_300</color>
+
+    <color name="chip_text_selected_color">@color/white</color>
+    <color name="chip_text_unselected_color">#352B47</color>
+
+    <color name="product_listing_description_color">@color/colorAccent</color>
+    <color name="product_listing_name_color">@color/black</color>
+    <color name="product_order_background_color">@color/purple_100</color>
+
+    <color name="product_badge_1_color">#9BD093</color>
+    <color name="product_badge_2_color">#A8C3EC</color>
+    <color name="product_badge_3_color">#F5DB7F</color>
+    <color name="product_final_price_color">#E38585</color>
+
+    <color name="order_status">#68B15C</color>
+    <color name="store_description_color">@color/purple_500</color>
+    <color name="store_listing_divider">@color/purple_200</color>
+
+    <color name="control_background">#F0EAF6</color>
+</resources>

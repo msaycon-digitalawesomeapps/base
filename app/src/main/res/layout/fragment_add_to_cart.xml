@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/da_components_spacing_large"
+    android:theme="@style/Theme.Exclusive">
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/tv_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Weight"
+        android:textSize="@dimen/da_components_text_size_16_sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_sizes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/da_components_spacing_very_small"
+        app:chipSpacingHorizontal="@dimen/da_components_spacing_very_small"
+        app:chipSpacingVertical="@dimen/da_components_spacing_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_size_label"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/da_components_spacing_normal"
+        android:text="Select Quantity"
+        android:textSize="@dimen/da_components_text_size_16_sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cg_sizes" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.controls.QuantityInput
+        android:id="@+id/qi_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/da_components_spacing_very_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quantity" />
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/da_components_spacing_large"
+        android:background="@color/da_components_color_grey_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qi_quantity" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/tv_total_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:text="Total"
+        android:textSize="@dimen/da_components_text_size_16_sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_total" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/da_components_spacing_normal"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/da_components_color_grey_900"
+        android:textSize="@dimen/da_components_text_size_16_sp"
+        app:da_components_textWeight="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_divider"
+        tools:text="@tools:sample/us_zipcodes" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.buttons.IconButton
+        android:id="@+id/bt_favorite"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginVertical="@dimen/da_components_spacing_large"
+        app:da_components_icon="@drawable/da_components_ic_heart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+        android:id="@+id/bt_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/da_components_spacing_large"
+        android:layout_marginStart="@dimen/da_components_spacing_small"
+        app:da_components_label="Add To Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

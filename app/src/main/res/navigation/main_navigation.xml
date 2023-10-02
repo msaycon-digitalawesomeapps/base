@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <navigation
+        android:id="@+id/navigation_home"
+        app:startDestination="@id/home">
+
+        <action
+            android:id="@+id/go_to_home"
+            app:destination="@id/home" />
+
+        <action
+            android:id="@+id/go_to_account"
+            app:destination="@id/account" />
+        <action
+            android:id="@+id/go_to_profile"
+            app:destination="@id/profile" />
+
+        <action
+            android:id="@+id/go_to_stores"
+            app:destination="@id/stores"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
+
+        />
+
+        <action
+            android:id="@+id/go_to_stores_with_search"
+            app:destination="@id/stores_with_search" />
+
+        <action
+            android:id="@+id/action_product_details_to_shopping_cart"
+            app:destination="@id/shopping_cart" />
+
+        <fragment
+            android:id="@+id/home"
+            android:name="com.digitalawesome.clearchoice.home.HomeFragment"
+            android:label="Home"
+            tools:layout="@layout/fragment_home">
+            <action
+                android:id="@+id/action_home_to_product_details"
+                app:destination="@id/product_details" />
+            <action
+                android:id="@+id/action_home_to_product_search"
+                app:destination="@id/product_search" />
+            <action
+                android:id="@+id/action_home_to_store"
+                app:destination="@id/stores" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/product_details"
+            android:name="com.digitalawesome.clearchoice.home.product.ProductDetailsFragment"
+            android:label="Product Detail"
+            tools:layout="@layout/fragment_product_details">
+            <action
+                android:id="@+id/action_product_details_to_shopping_cart"
+                app:destination="@id/shopping_cart" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/product_search"
+            android:name="com.digitalawesome.clearchoice.home.search.SearchFragment"
+            android:label="Product Search"
+            tools:layout="@layout/fragment_search">
+
+            <action
+                android:id="@+id/action_search_to_product_details"
+                app:destination="@id/product_details" />
+            <action
+                android:id="@+id/action_search_to_store"
+                app:destination="@id/stores" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/shopping_cart"
+            android:name="com.digitalawesome.clearchoice.home.cart.ShoppingCartFragment"
+            android:label="Product Detail"
+            tools:layout="@layout/fragment_shopping_cart"></fragment>
+
+        <fragment
+            android:id="@+id/stores"
+            android:name="com.digitalawesome.clearchoice.home.stores.StoresFragment"
+            android:label="Stores"
+            tools:layout="@layout/fragment_stores"></fragment>
+
+        <fragment
+            android:id="@+id/account"
+            android:name="com.digitalawesome.clearchoice.home.account.AccountFragment"
+            android:label="Account  "
+            tools:layout="@layout/fragment_account">
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/stores_with_search"
+            android:name="com.digitalawesome.clearchoice.home.stores.StoresWithSearchFragment"
+            android:label="Stores"
+            tools:layout="@layout/fragment_stores_with_search"></fragment>
+
+        <fragment
+            android:id="@+id/profile"
+            android:name="com.digitalawesome.clearchoice.home.account.profile.ProfileFragment"
+            android:label="Profile"
+            tools:layout="@layout/fragment_profile"></fragment>
+
+    </navigation>
+</navigation>

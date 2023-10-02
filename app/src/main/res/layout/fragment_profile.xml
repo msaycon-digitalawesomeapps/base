@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.digitalawesome.dispensary.domain.models.UserAttributes" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/da_components_spacing_large"
+            tools:context=".home.account.profile.ProfileFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_avatar_container"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/da_components_spacing_large"
+                app:cardCornerRadius="@dimen/da_components_spacing_small">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    bind:srcUrl="@{user.avatar}"
+                    tools:src="@tools:sample/avatars" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/tv_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:text="@{user.fullname}"
+                android:textAlignment="center"
+                android:textSize="@dimen/da_components_text_size_20_sp"
+                app:da_components_textWeight="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_profile_info"
+                app:layout_constraintStart_toEndOf="@+id/cv_avatar_container"
+                app:layout_constraintTop_toTopOf="@+id/cv_avatar_container"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="@tools:sample/full_names" />
+
+
+            <include
+                android:id="@+id/v_email"
+                layout="@layout/view_holder_field_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_extreme_large_2"
+                android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                bind:field="@{`Email`}"
+                bind:value="@{user.email}" />
+
+            <include
+                android:id="@+id/v_name"
+                layout="@layout/view_holder_field_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                bind:field="@{`Name`}"
+                bind:value="@{user.fullname}" />
+
+            <include
+                android:id="@+id/v_phone"
+                layout="@layout/view_holder_field_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                bind:field="@{`Phone`}"
+                bind:value="@{user.phone}" />
+
+            <include
+                android:id="@+id/v_state"
+                layout="@layout/view_holder_field_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                bind:field="@{`State`}"
+                bind:value="@{user.state}" />
+
+            <include
+                android:id="@+id/v_reset_password"
+                layout="@layout/view_holder_field_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/da_components_spacing_normal"
+                bind:field="@{`Reset Password`}"
+                bind:value="@{``}" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/da_components_spacing_small"
+                android:text="Delete Account"
+                android:textColor="#E15350"
+                android:textSize="@dimen/da_components_text_size_12_sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
+

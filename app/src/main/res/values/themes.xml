@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Starting" parent="Theme.SplashScreen">
+        <item name="android:windowBackground">@color/purple_100</item>
+        <item name="windowSplashScreenBackground">@color/purple_100</item>
+        <item name="postSplashScreenTheme">@style/Theme.Exclusive</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_inset</item>
+    </style>
+
+    <style name="Theme.NoBackgroundDialogTheme" parent="da_components_Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="Theme.Exclusive" parent="da_components_Theme">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="android:colorPrimary">@color/purple_200</item>
+        <item name="android:colorPrimaryDark">@color/primary_accent</item>
+        <item name="colorPrimaryVariant">@color/da_components_color_grey_900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/da_components_color_grey_900</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+        <item name="da_components_backgroundColor">@color/white</item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundStart">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundEnd">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundPressedStart">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundPressedEnd">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonBackgroundDisabled">
+            @color/da_components_color_grey_500
+        </item>
+        <item name="da_components_themeColorPrimaryButtonProgress">@color/white</item>
+        <item name="da_components_themeColorPrimaryButtonText">@color/da_components_color_white
+        </item>
+        <item name="da_components_themeColorPrimaryButtonTextDisabled">
+            @color/da_components_color_grey_200
+        </item>
+
+        <item name="da_components_themeColorSecondaryButtonText">@color/primary_accent</item>
+        <item name="da_components_themeColorSecondaryButtonTextDisabled">@color/primary_accent
+        </item>
+        <item name="da_components_themeColorSecondaryButtonTextPressed">@color/primary_accent</item>
+
+        <!-- TODO: Call to action button here -->
+        <item name="da_components_themeButtonCornerRadius">20dp</item>
+        <item name="da_components_themeColorSecondaryButton">@null</item>
+        <item name="da_components_themeColorLinkText">@color/primary_accent</item>
+
+        <!-- Dropdown -->
+        <item name="da_components_themeColorDropdownBackground">@color/white</item>
+        <item name="da_components_themeDropdownRadius">@dimen/default_view_radius
+        </item>
+        <item name="da_components_themeColorDropdownBorderColor">#737373</item>
+
+        <!-- Listing -->
+        <item name="da_components_themeListingCardRadius">@dimen/product_view_radius</item>
+        <item name="da_components_themeListingCardWidth">155dp</item>
+        <item name="da_components_themeListingCardProductImageHeight">155dp</item>
+        <item name="da_components_themeListingCardProductImageRadius">@dimen/product_image_radius
+        </item>
+        <item name="da_components_themeListingCardProductNameTextSize">
+            @dimen/da_components_text_size_14_sp
+        </item>
+        <item name="da_components_themeListingCardProductNameTextColor">
+            @color/product_listing_name_color
+        </item>
+        <item name="da_components_themeListingCardProductDescriptionTextSize">9sp</item>
+        <item name="da_components_themeListingCardProductDescriptionTextColor">
+            @color/product_listing_description_color
+        </item>
+        <item name="da_components_themeListingCardProductOriginalPriceTextSize">
+            @dimen/product_original_price_text_size
+        </item>
+        <item name="da_components_themeListingCardProductOriginalPriceTextColor">#0C0C0C</item>
+        <item name="da_components_themeListingCardProductFinalPriceTextSize">
+            @dimen/da_components_text_size_14_sp
+        </item>
+        <item name="da_components_themeListingCardProductFinalPriceTextColor">
+            @color/product_final_price_color
+        </item>
+        <item name="da_components_themeListingCardProductBadge1TextSize">10sp</item>
+        <item name="da_components_themeListingCardProductBadge1TextColor">@color/black</item>
+        <item name="da_components_themeListingCardProductBadge1BackgroundColor">
+            @color/product_badge_1_color
+        </item>
+        <item name="da_components_themeListingCardProductBadge2TextSize">10sp</item>
+        <item name="da_components_themeListingCardProductBadge2TextColor">@color/black</item>
+        <item name="da_components_themeListingCardProductBadge2BackgroundColor">
+            @color/product_badge_2_color
+        </item>
+
+        <!-- Search Bar -->
+        <item name="da_components_themeColorSearchBarBackground">@color/white</item>
+        <item name="da_components_themeSearchBarRadius">@dimen/da_components_spacing_very_small
+        </item>
+        <item name="da_components_themeColorSearchBarText">@color/black</item>
+        <item name="da_components_themeColorSearchBarHint">@color/black</item>
+
+        <!-- Icon button colors -->
+        <item name="da_components_themeColorIconButtonBackground">#F2F6F8</item>
+        <item name="da_components_themeColorIconButtonBackgroundPressed">#F2F6F8</item>
+        <item name="da_components_themeColorIconButtonBackgroundDisabled">
+            @color/da_components_color_grey_300
+        </item>
+        <item name="da_components_themeColorIconButtonProgress">@color/black</item>
+        <item name="da_components_themeColorIconButtonTint">@color/black</item>
+        <item name="da_components_themeColorIconButtonTintDisabled">@color/da_components_gray_400
+        </item>
+
+        <item name="da_components_themeColorTextPrimary">@color/black</item>
+        <item name="da_components_themeColorTextSecondary">@color/purple_300
+        </item>
+
+        <!-- TextField -->
+        <item name="da_components_themeColorTextFieldText">@color/input_field_text_color
+
+        </item>
+
+        <item name="da_components_themeColorTextFieldLabelFocused">
+            @color/input_field_text_color
+        </item>
+
+        <item name="da_components_themeColorTextFieldLabelDisabled">
+            @color/input_hint_color
+        </item>
+
+        <item name="da_components_themeColorTextFieldPlaceholder">
+            @color/input_hint_color
+        </item>
+
+        <item name="da_components_themeColorTextFieldBackgroundStrokeColor">
+            @color/input_field_stroke_color
+        </item>
+
+        <item name="da_components_themeColorTextFieldBackgroundStrokeColorFocused">
+            @color/input_field_stroke_focus_color
+        </item>
+
+        <item name="da_components_themeTextFieldBackgroundRadius">20dp</item>
+
+        <item name="da_components_themeColorTextFieldHelper">@color/input_hint_color
+        </item>
+
+        <!-- Controls -->
+        <item name="da_components_themeColorControlBackground">@color/control_background</item>
+        <item name="da_components_themeColorControlPrimaryEnabled">@color/primary_accent</item>
+        <item name="da_components_themeColorControlPrimaryDisabled">@color/primary_accent</item>
+        <item name="da_components_themeColorControlSecondaryEnabled">@color/purple_200</item>
+        <item name="da_components_themeColorControlSecondaryDisabled">@color/purple_200</item>
+
+        <!-- Disable default splash. -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.Exclusive.BottomNav" parent="Theme.Exclusive">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/primary_font_regular</item>
+    </style>
+
+    <style name="Theme.Exclusive.Blue" parent="Theme.Exclusive">
+        <item name="colorAccent">@color/da_components_text_color_link</item>
+
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundStart">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundEnd">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundPressedStart">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonGradientBackgroundPressedEnd">
+            @color/primary_accent
+        </item>
+        <item name="da_components_themeColorPrimaryButtonBackgroundDisabled">
+            @color/da_components_color_grey_500
+        </item>
+        <item name="da_components_themeColorPrimaryButtonProgress">@color/primary_accent</item>
+
+        <item name="da_components_themeColorPrimaryButtonText">@color/da_components_color_white
+        </item>
+        <item name="da_components_themeColorSecondaryButtonText">@color/primary_accent</item>
+        <item name="da_components_themeColorSecondaryButtonTextPressed">@color/primary_accent</item>
+        <item name="da_components_themeColorSecondaryButtonTextDisabled">@color/primary_accent
+        </item>
+        <item name="da_components_themeColorSecondaryButtonProgress">@color/primary_accent</item>
+    </style>
+
+    <style name="Theme.Exclusive.Chips" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+        <item name="android:textColor">@color/da_components_choice_text_color</item>
+        <item name="chipBackgroundColor">@color/da_components_choice_indicator_color</item>
+    </style>
+
+    <!-- Custom application theme. -->
+    <style name="Theme.Clear.Choice.Splash" parent="Theme.Exclusive">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Opt.Checkbox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/primary_accent
+        </item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">@color/primary_accent
+        </item> <!-- activated color change as you wish -->
+        <item name="android:textColor">@color/primary_accent</item> <!-- checkbox text color -->
+    </style>
+
+    <style name="Theme.Clear.Choice.Chip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipCornerRadius">@dimen/default_view_radius</item>
+        <item name="chipStrokeColor">@drawable/chip_stroke_statelist</item>
+        <item name="chipBackgroundColor">@drawable/chip_bg_statelist</item>
+        <item name="android:textColor">@drawable/chip_text_statelist</item>
+        <item name="chipStrokeWidth">@dimen/chip_stroke_width</item>
+        <item name="chipMinHeight">@dimen/da_components_spacing_very_small</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="fontFamily">@font/primary_font_regular</item>
+    </style>
+
+    <style name="Theme.Clear.Choice.Chip_Sort" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="chipBackgroundColor">@color/colorAccent</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+    </style>
+
+    <style name="ProductTabAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

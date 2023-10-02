@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="image"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/guardingMainConstraintLayout"
+        android:layout_width="268dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="@dimen/da_components_spacing_small"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:onClick="@{onClick}">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shop_promo_thumbnail_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@color/da_components_gray_400"
+            app:cardCornerRadius="@dimen/default_view_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/purple_200"
+            app:strokeWidth="2dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_promo_thumbnail"
+                android:layout_width="268dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_app_icon"
+                bind:srcUrl="@{image}" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:text="@{title}" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

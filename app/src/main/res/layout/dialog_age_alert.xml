@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/da_components_spacing_extreme_large"
+    android:paddingVertical="@dimen/da_components_spacing_very_large"
+    tools:theme="@style/Theme.Exclusive">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/da_components_spacing_small"
+            android:gravity="center"
+            android:textColor="?attr/da_components_themeColorHeaderText"
+            app:da_components_fontType="primary"
+            app:da_components_textWeight="bold"
+            tools:text="@tools:sample/lorem" />
+
+        <!-- The body of the alert -->
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:id="@+id/tv_description"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/da_components_spacing_very_large"
+            android:gravity="center"
+            android:maxLines="10"
+            android:textColor="@color/primary_accent"
+            app:da_components_fontType="primary"
+            tools:maxLines="2"
+            tools:text="@tools:sample/lorem/random" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="@dimen/age_dialog_icon"
+        android:layout_height="@dimen/age_dialog_icon"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_age_min" />
+
+    <!-- The default cancel and confirm buttons -->
+    <LinearLayout
+        android:id="@+id/defaultButtonsLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_icon">
+
+        <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+            android:id="@+id/bt_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:da_components_fontType="primary"
+            app:da_components_label="Yes" />
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:id="@+id/bt_cancel"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/lbl_no"
+            app:da_components_fontType="primary" />
+
+    </LinearLayout>
+
+    <!-- The linear layout for the arbitrary number of buttons -->
+    <LinearLayout
+        android:id="@+id/alertButtonsLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/defaultButtonsLinearLayout"
+        tools:layout_editor_absoluteX="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

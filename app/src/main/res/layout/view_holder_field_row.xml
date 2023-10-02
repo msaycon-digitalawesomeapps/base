@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="field"
+            type="String" />
+
+        <variable
+            name="value"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/da_components_spacing_small"
+        tools:theme="@style/Theme.Exclusive">
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/da_components_spacing_small"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            android:text="@{field}"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/da_components_text_size_14_sp"
+            app:da_components_fontType="primary"
+            tools:text="@tools:sample/lorem" />
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/da_components_spacing_small"
+            android:gravity="center_vertical|end"
+            android:maxWidth="250dp"
+            android:text="@{value}"
+            android:textAlignment="gravity"
+            android:textColor="@color/purple_400"
+            android:textSize="@dimen/da_components_text_size_12_sp"
+            app:da_components_fontType="primary"
+            tools:text="@tools:sample/us_phones" />
+
+        <com.digitalawesome.dispensary.components.views.atoms.icons.ThickIconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:da_components_thickIcon="chevron_right" />
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Exclusive">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="pin"
+            app:title="Collapsing Toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_dropdown_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_normal"
+                    android:layout_marginTop="@dimen/da_components_spacing_small"
+                    android:drawableEnd="@drawable/da_components_ic_chevron_down_thick_light"
+                    android:drawablePadding="@dimen/da_components_spacing_very_small"
+                    android:gravity="center"
+                    android:padding="@dimen/da_components_spacing_small"
+                    android:visibility="gone"
+                    android:text="Menu"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/v_stores"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+                    android:layout_marginVertical="@dimen/da_components_spacing_small"
+                    android:background="@drawable/da_components_dropdown_background_light"
+                    android:drawableStart="@drawable/da_components_ic_shop"
+                    android:drawableEnd="@drawable/da_components_ic_chevron_down_thick_light"
+                    android:drawablePadding="@dimen/da_components_spacing_small"
+                    android:drawableTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/da_components_spacing_normal"
+                    android:text="Ann Arbor Cannabis Dispensary"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dropdown_menu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            app:cardCornerRadius="@dimen/da_components_spacing_very_small"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/da_components_spacing_normal"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:orientation="horizontal"
+                app:cardCornerRadius="@dimen/da_components_spacing_very_small"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp">
+
+                <com.digitalawesome.dispensary.components.views.molecules.inputs.SearchBar
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:paddingEnd="50dp"
+                    android:hint="Search"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:src="@drawable/da_components_ic_search_black"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/da_components_spacing_normal"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.IconButton
+                android:id="@+id/bt_view_mode"
+                app:da_components_icon="@drawable/da_components_ic_list_view"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/da_components_spacing_small"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.IconButton
+                android:id="@+id/bt_sort"
+                app:da_components_icon="@drawable/da_components_ic_sort"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/da_components_spacing_small"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.IconButton
+                android:id="@+id/bt_filter"
+                app:da_components_icon="@drawable/da_components_ic_filter"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="@dimen/da_components_spacing_small"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_chip_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:paddingHorizontal="@dimen/da_components_spacing_large"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_filter_top"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Flower"
+                    android:focusable="true"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:chipCornerRadius="@dimen/da_components_spacing_very_small"
+                    app:chipMinHeight="32dp"
+                    app:chipMinTouchTargetSize="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Pre-Rolls"
+                    android:focusable="true"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                    app:chipBackgroundColor="@color/da_components_color_transparent"
+                    app:chipCornerRadius="@dimen/da_components_spacing_very_small"
+                    app:chipMinHeight="32dp"
+                    app:chipMinTouchTargetSize="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Vaporizers"
+                    android:focusable="true"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                    app:chipBackgroundColor="@color/da_components_color_transparent"
+                    app:chipCornerRadius="@dimen/da_components_spacing_very_small"
+                    app:chipMinHeight="32dp"
+                    app:chipMinTouchTargetSize="0dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Concentrates"
+                    android:focusable="true"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                    app:chipBackgroundColor="@color/da_components_color_transparent"
+                    app:chipCornerRadius="@dimen/da_components_spacing_very_small"
+                    app:chipMinHeight="32dp"
+                    app:chipMinTouchTargetSize="0dp" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- SwipeRefreshLayout with RecyclerView -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/da_components_spacing_small"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- RecyclerView -->
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rv_listings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:paddingHorizontal="@dimen/da_components_spacing_large"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

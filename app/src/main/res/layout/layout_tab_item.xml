@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabItem"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:letterSpacing="0.01"
+    android:textAllCaps="true"
+    android:maxLines="1"
+    android:textColor="@color/da_components_color_grey_900"
+    android:textSize="@dimen/da_components_text_size_14_sp"
+    android:text=""
+    tools:text="Tab Item" />

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_launcher_icon"
+    android:insetLeft="@dimen/inset_size_horizontal"
+    android:insetTop="@dimen/inset_size_vertical"
+    android:insetRight="@dimen/inset_size_horizontal"
+    android:insetBottom="@dimen/inset_size_vertical" />

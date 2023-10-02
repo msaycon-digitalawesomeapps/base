@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/headerText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/da_components_spacing_extreme_large"
+        android:text="@string/lbl_location_access"
+        app:da_components_fontType="primary"
+        app:da_components_textWeight="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_location" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/spielText"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+        android:layout_marginTop="@dimen/da_components_spacing_normal"
+        android:gravity="center"
+        android:text="@string/lbl_location_desc"
+        app:da_components_fontType="primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+        android:id="@+id/bt_enable_location_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/da_components_spacing_large"
+        app:da_components_label="Enable Location Service" />
+</LinearLayout>

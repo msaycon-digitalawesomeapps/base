@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Exclusive">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Collapsing Toolbar -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+                    app:cardCornerRadius="@dimen/default_view_radius"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/purple_100"
+                    app:strokeWidth="0.5dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+                    android:layout_marginTop="@dimen/da_components_spacing_small"
+                    android:maxLines="3"
+                    android:textSize="@dimen/da_components_text_size_20_sp"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintEnd_toStartOf="@id/cv_chat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_product_image"
+                    tools:text="@tools:sample/lorem/random" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_seller"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+                    android:layout_marginTop="@dimen/da_components_spacing_very_small"
+                    android:text="HEAVYWEIGHT HEADS"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/product_original_price_text_size"
+                    app:da_components_fontType="primary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/da_components_spacing_large"
+                    app:cardBackgroundColor="@color/purple_100"
+                    app:cardCornerRadius="@dimen/default_view_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_product_image"
+                    app:layout_constraintTop_toTopOf="@+id/tv_product_name">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:minWidth="50dp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/da_components_spacing_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_chats"
+                            app:tint="@color/purple_300" />
+
+                        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Chat"
+                            android:textColor="@color/primary_accent"
+                            android:textSize="14sp"
+                            app:da_components_fontType="primary"
+                            app:da_components_textWeight="bold" />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.digitalawesome.dispensary.components.views.atoms.badge.Badge
+                    android:id="@+id/badge_cbd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:layout_marginEnd="16dp"
+                    android:paddingEnd="8dp"
+                    app:da_components_backgroundColor="?attr/da_components_themeListingCardProductBadge1BackgroundColor"
+                    app:da_components_badge="24%"
+                    app:da_components_radius="@dimen/da_components_spacing_very_small"
+                    app:da_components_textColor="?attr/da_components_themeListingCardProductBadge1TextColor"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="@id/tv_product_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_seller"
+                    tools:badge="4" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.badge.Badge
+                    android:id="@+id/badge_thc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    app:badgeHeight="@dimen/product_original_price_text_size"
+                    app:da_components_backgroundColor="?attr/da_components_themeListingCardProductBadge2BackgroundColor"
+                    app:da_components_badge="24%"
+                    app:da_components_radius="@dimen/da_components_spacing_very_small"
+                    app:da_components_textColor="?attr/da_components_themeListingCardProductBadge2TextColor"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/badge_cbd"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_seller"
+                    tools:badge="4" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.badge.Badge
+                    android:id="@+id/badge_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    app:da_components_backgroundColor="@color/product_badge_3_color"
+                    app:da_components_badge="Sativa"
+                    app:da_components_radius="@dimen/da_components_spacing_very_small"
+                    app:da_components_textColor="?attr/da_components_themeListingCardProductBadge2TextColor"
+                    app:layout_constraintEnd_toEndOf="@id/cv_chat"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_product_seller"
+                    tools:badge="4" />
+
+                <LinearLayout
+                    android:id="@+id/v_consolidated_ratings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_large"
+                    android:layout_marginTop="@dimen/da_components_spacing_small"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/badge_thc">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/da_components_ic_star" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/da_components_ic_star_outline" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/da_components_ic_star_outline" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/da_components_ic_star_outline" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/da_components_ic_star_outline" />
+
+                    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                        android:id="@+id/tv_review_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/da_components_spacing_small"
+                        android:text="(21 reviews)"
+                        android:textColor="#737373"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_final_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_large"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:ellipsize="end"
+                    android:text="$100"
+                    android:textColor="?attr/da_components_themeListingCardProductFinalPriceTextColor"
+                    android:textSize="@dimen/da_components_text_size_20_sp"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_consolidated_ratings" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    android:id="@+id/tv_product_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/da_components_spacing_very_small"
+                    android:layout_marginTop="@dimen/da_components_spacing_normal"
+                    android:ellipsize="end"
+                    android:paddingHorizontal="2dp"
+                    android:text="$120"
+                    android:textColor="?attr/da_components_themeListingCardProductOriginalPriceTextColor"
+                    android:textSize="@dimen/da_components_text_size_20_sp"
+                    app:da_components_textWeight="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_product_final_price"
+                    app:layout_constraintTop_toBottomOf="@id/v_consolidated_ratings" />
+
+                <View
+                    android:id="@+id/v_product_original_price_slash"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="?da_components_themeListingCardProductOriginalPriceTextColor"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_product_original_price"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_product_original_price"
+                    app:layout_constraintStart_toStartOf="@id/tv_product_original_price"
+                    app:layout_constraintTop_toTopOf="@id/tv_product_original_price" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:title="Collapsing Toolbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.digitalawesome.dispensary.components.views.atoms.icons.ThickIconView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/da_components_spacing_large"
+                        app:da_components_isDarkBackground="true"
+                        app:da_components_thickIcon="chevron_left"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:tabIndicator="@color/primary_accent"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="@color/primary_accent"
+        app:tabTextAppearance="@style/ProductTabAppearance"
+        app:tabTextColor="@color/purple_300">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="54dp"
+        android:paddingHorizontal="@dimen/da_components_spacing_large"
+        android:paddingVertical="@dimen/da_components_spacing_normal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After consuming A1, one can sense a wave of potent cannabis energy washing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            app:da_components_fontType="primary" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/nsv_ratings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="54dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    </com.airbnb.epoxy.EpoxyRecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/bt_add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary_accent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/purple_200" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Add to Basket"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:da_components_fontType="primary"
+                app:da_components_textWeight="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.digitalawesome.dispensary.components.views.atoms.buttons.SalesButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        app:da_components_label="Add to Basket" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

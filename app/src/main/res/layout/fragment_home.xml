@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Exclusive">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Collapsing Toolbar -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Toolbar -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:clipToPadding="true"
+                    android:contentInsetStart="0dp"
+                    android:contentInsetLeft="0dp"
+                    android:contentInsetEnd="0dp"
+                    android:contentInsetRight="0dp"
+                    android:padding="4dp"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:menu="@menu/sticky_nav_menu"
+                    app:title="Collapsing Toolbar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical">
+
+                        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                            android:id="@+id/tv_dropdown_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/da_components_spacing_normal"
+                            android:layout_marginTop="@dimen/da_components_spacing_small"
+                            android:drawableEnd="@drawable/da_components_ic_chevron_down_thick_light"
+                            android:drawablePadding="@dimen/da_components_spacing_very_small"
+                            android:gravity="center"
+                            android:padding="@dimen/da_components_spacing_small"
+                            android:text="Menu"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                            android:id="@+id/v_stores"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginHorizontal="@dimen/da_components_spacing_medium"
+                            android:background="@drawable/da_components_dropdown_background"
+                            android:drawableStart="@drawable/ic_location_small"
+                            android:drawableEnd="@drawable/da_components_ic_chevron_down_thick_light"
+                            android:drawablePadding="@dimen/da_components_spacing_very_small"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/da_components_spacing_normal"
+                            android:text="Ann Arbor Cannabis Dispensary"
+                            android:textColor="@color/purple_500"
+                            android:textSize="12sp"
+                            app:da_components_fontType="primary"
+                            app:drawableTint="@color/colorAccent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_dropdown_menu" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_filter_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_home_toolbar"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/da_components_spacing_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline_90"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline_90"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_percent="1.2" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_filter_holder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/da_components_spacing_large"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RelativeLayout
+                                android:id="@+id/hsv_chip_sort_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/sv_search"
+                                    android:orientation="horizontal">
+
+                                    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="16dp"
+                                        android:drawableEnd="@drawable/intercom_list_arrow_down"
+                                        android:drawablePadding="4dp"
+                                        android:includeFontPadding="false"
+                                        android:padding="4dp"
+                                        android:text="@string/lbl_sort"
+                                        app:da_components_fontType="primary"
+                                        app:drawableTint="@color/colorAccent" />
+
+                                    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="16dp"
+                                        android:drawableEnd="@drawable/intercom_list_arrow_down"
+                                        android:drawablePadding="4dp"
+                                        android:includeFontPadding="false"
+                                        android:padding="4dp"
+                                        android:text="@string/lbl_thc"
+                                        app:da_components_fontType="primary"
+                                        app:drawableTint="@color/colorAccent" />
+
+                                    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="16dp"
+                                        android:drawableEnd="@drawable/intercom_list_arrow_down"
+                                        android:drawablePadding="4dp"
+                                        android:includeFontPadding="false"
+                                        android:padding="4dp"
+                                        android:text="@string/lbl_cbd"
+                                        app:da_components_fontType="primary"
+                                        app:drawableTint="@color/colorAccent" />
+
+                                    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="16dp"
+                                        android:drawableEnd="@drawable/intercom_list_arrow_down"
+                                        android:drawablePadding="4dp"
+                                        android:includeFontPadding="false"
+                                        android:padding="4dp"
+                                        android:text="@string/lbl_price"
+                                        app:da_components_fontType="primary"
+                                        app:drawableTint="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/sv_search"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_search_view"
+                                    android:padding="10dp"
+                                    app:srcCompat="@drawable/ic_search"
+                                    app:tint="@color/colorAccent" />
+                            </RelativeLayout>
+
+                            <HorizontalScrollView
+                                android:id="@+id/hsv_chip_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:scrollbars="none">
+
+                                <com.google.android.material.chip.ChipGroup
+                                    android:id="@+id/cg_filter_top"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false">
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/Theme.Clear.Choice.Chip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="32dp"
+                                        android:checkable="true"
+                                        android:checked="true"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:text="Flower" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/Theme.Clear.Choice.Chip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="32dp"
+                                        android:checkable="true"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:text="Pre-Rolls" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/Theme.Clear.Choice.Chip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="32dp"
+                                        android:checkable="true"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:text="Vaporizers" />
+
+                                    <com.google.android.material.chip.Chip
+                                        style="@style/Theme.Clear.Choice.Chip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="32dp"
+                                        android:checkable="true"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:text="Concentrates" />
+                                </com.google.android.material.chip.ChipGroup>
+                            </HorizontalScrollView>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- The Shop Options -->
+                    <com.airbnb.epoxy.EpoxyRecyclerView
+                        android:id="@+id/rv_shop_promo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="-100dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/da_components_spacing_small"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_filter_holder"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:listitem="@layout/da_components_listitem_shop_promotion_tile" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+            <!-- Your Collapsible Content -->
+            <!-- You can put your desired content here, such as ImageView, TextView, etc. -->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="@dimen/da_components_spacing_large"
+        android:visibility="gone"
+        app:cardBackgroundColor="#F2F6F8"
+        app:cardCornerRadius="@dimen/da_components_spacing_very_small"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.digitalawesome.dispensary.components.views.molecules.inputs.SearchBar
+            android:id="@+id/sb_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/da_components_spacing_small"
+            android:layout_marginEnd="50dp"
+            android:hint="Search"
+            android:inputType="none" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="64dp"
+            android:src="@drawable/da_components_ic_search_black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bt_filter"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:padding="@dimen/da_components_spacing_small"
+            android:src="@drawable/da_components_ic_filter"
+            app:tint="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- SwipeRefreshLayout with RecyclerView -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- RecyclerView -->
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/da_components_spacing_small"
+            android:paddingVertical="@dimen/da_components_spacing_small"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:spanCount="2" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
