@@ -7,112 +7,153 @@
     android:layout_height="match_parent"
     tools:theme="@style/Theme.Exclusive">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/da_components_spacing_large"
-        android:layout_marginTop="@dimen/da_components_spacing_extreme_large"
-        android:orientation="vertical"
-        android:paddingTop="?actionBarSize">
+        android:background="@drawable/bg_auth">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_app_icon_name_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.10" />
 
         <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
-            style="@style/TextAppearance.AppCompat.Headline"
-            android:layout_width="match_parent"
+            android:id="@+id/ctv_tagline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/da_components_spacing_very_large"
-            android:includeFontPadding="false"
-            android:text="@string/lbl_login"
-            app:da_components_fontType="primary"
-            app:da_components_textWeight="bold" />
-
-        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
-            style="@style/TextAppearance.AppCompat.Body1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/da_components_spacing_normal"
-            android:text="@string/lbl_email"
-            android:textColor="@color/input_field_label_color"
-            android:textSize="@dimen/input_label"
-            app:da_components_fontType="primary" />
-
-        <com.digitalawesome.dispensary.components.views.molecules.inputs.TextField
-            android:id="@+id/tf_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-28dp"
-            android:hint="@string/lbl_email"
-            app:da_components_label=""
-            app:da_components_text="" />
-
-        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
-            style="@style/TextAppearance.AppCompat.Body1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/da_components_spacing_small"
-            android:text="@string/lbl_password"
-            android:textColor="@color/input_field_label_color"
-            android:textSize="@dimen/input_label"
-            app:da_components_fontType="primary" />
-
-        <com.digitalawesome.dispensary.components.views.molecules.inputs.TextField
-            android:id="@+id/tf_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-28dp"
-            android:hint="@string/lbl_password"
-            android:inputType="textPassword"
-            app:da_components_label=""
-            app:da_components_text=""
-            app:da_components_thinIcon="eye" />
-
-        <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
-            android:id="@+id/bt_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/da_components_spacing_large"
-            app:da_components_label="Login" />
-
-        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
-            android:id="@+id/bt_forgotPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/da_components_spacing_normal"
-            android:gravity="center"
-            android:text="@string/lbl_forgot_password"
+            android:layout_marginTop="18dp"
+            android:text="@string/auth_tagline"
             android:textAlignment="center"
-            app:da_components_fontType="primary" />
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:da_components_fontType="primary"
+            app:da_components_textWeight="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
 
         <LinearLayout
-            android:id="@+id/bt_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/da_components_spacing_normal"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/bg_auth_inputs"
+            android:orientation="vertical"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctv_tagline">
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_very_large"
+                android:includeFontPadding="false"
+                android:text="@string/lbl_login"
+                app:da_components_fontType="primary"
+                app:da_components_textWeight="bold" />
 
             <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="@dimen/da_components_spacing_small"
-                android:gravity="center"
-                android:text="@string/lbl_not_member"
-                android:textAlignment="center"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:text="@string/lbl_email"
+                android:textColor="@color/input_field_label_color"
+                android:textSize="@dimen/input_label"
                 app:da_components_fontType="primary" />
 
-            <com.digitalawesome.dispensary.components.views.atoms.buttons.Link
-                android:layout_width="wrap_content"
+            <com.digitalawesome.dispensary.components.views.molecules.inputs.TextField
+                android:id="@+id/tf_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-28dp"
+                android:hint="@string/lbl_email"
+                app:da_components_label=""
+                app:da_components_text="" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_small"
+                android:text="@string/lbl_password"
+                android:textColor="@color/input_field_label_color"
+                android:textSize="@dimen/input_label"
+                app:da_components_fontType="primary" />
+
+            <com.digitalawesome.dispensary.components.views.molecules.inputs.TextField
+                android:id="@+id/tf_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-28dp"
+                android:hint="@string/lbl_password"
+                android:inputType="textPassword"
+                app:da_components_label=""
+                app:da_components_text=""
+                app:da_components_thinIcon="eye" />
+
+            <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                android:id="@+id/bt_forgotPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/lbl_sign_up"
-                android:textAlignment="center"
-                app:da_components_fontType="primary"
-                app:da_components_textWeight="bold" />
-        </LinearLayout>
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:gravity="start"
+                android:text="@string/lbl_forgot_password"
+                android:textColor="@color/forgot_password"
+                app:da_components_fontType="primary" />
 
-    </LinearLayout>
+            <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="32dp"
+                app:da_components_label="LOG IN" />
+
+            <LinearLayout
+                android:id="@+id/bt_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/da_components_spacing_normal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/da_components_spacing_small"
+                    android:gravity="center"
+                    android:text="@string/lbl_not_member"
+                    android:textAlignment="center"
+                    android:textColor="#757575"
+                    app:da_components_fontType="primary" />
+
+                <com.digitalawesome.dispensary.components.views.atoms.buttons.Link
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/lbl_create_account"
+                    android:textAlignment="center"
+                    app:da_components_fontType="primary"
+                    app:da_components_textWeight="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

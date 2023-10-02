@@ -15,16 +15,18 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_location" />
+        android:layout_width="451dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-24dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_location" />
 
     <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
         android:id="@+id/headerText"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/da_components_spacing_extreme_large"
         android:text="@string/lbl_location_access"
         app:da_components_fontType="primary"
         app:da_components_textWeight="bold"
@@ -54,7 +56,7 @@
     <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
         android:id="@+id/bt_enable_location_service"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/da_components_spacing_large"
         app:da_components_label="Enable Location Service" />
 </LinearLayout>

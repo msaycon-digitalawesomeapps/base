@@ -23,7 +23,7 @@
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/da_components_spacing_small"
+            android:layout_marginBottom="@dimen/da_components_spacing_normal"
             android:gravity="center"
             android:textColor="?attr/da_components_themeColorHeaderText"
             app:da_components_fontType="primary"
@@ -39,7 +39,7 @@
             android:layout_marginBottom="@dimen/da_components_spacing_very_large"
             android:gravity="center"
             android:maxLines="10"
-            android:textColor="@color/primary_accent"
+            android:textColor="@color/secondary_text_color"
             app:da_components_fontType="primary"
             tools:maxLines="2"
             tools:text="@tools:sample/lorem/random" />
@@ -51,6 +51,7 @@
         android:layout_height="@dimen/age_dialog_icon"
         android:layout_margin="16dp"
         android:scaleType="fitCenter"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,19 +72,19 @@
         <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
             android:id="@+id/bt_confirm"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/button_height"
             app:da_components_fontType="primary"
-            app:da_components_label="Yes" />
+            app:da_components_label="@string/lbl_confirm" />
 
-        <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        <com.digitalawesome.dispensary.components.views.atoms.buttons.SecondaryButton
             android:id="@+id/bt_cancel"
             style="@style/TextAppearance.AppCompat.Subhead"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:padding="16dp"
-            android:text="@string/lbl_no"
-            app:da_components_fontType="primary" />
+            app:da_components_fontType="primary"
+            app:da_components_label="@string/lbl_cancel" />
 
     </LinearLayout>
 

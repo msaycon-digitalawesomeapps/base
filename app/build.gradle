@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.digitalawesome.clearchoice'
+    namespace 'com.digitalawesome.recweed'
     compileSdk 33
 
     defaultConfig {
-        applicationId 'com.digitalawesome.clearchoice'
+        applicationId 'com.digitalawesome.recweed'
         minSdk 24
         targetSdk 33
         versionCode 1

@@ -6,7 +6,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primaryColor">#9B89B9</color>
+    <color name="primaryColor">#C1272D</color>
     <color name="secondaryColor">#584876</color>
     <color name="colorAccent">#6B5F85</color>
     <color name="secondaryDark">#604E7F</color>
@@ -19,7 +19,9 @@
     <color name="purple_500">#604E7F</color>
     <color name="purple_600">#584876</color>
 
-    <color name="primary_accent">#6B5F85</color>
+    <color name="primary_accent">#C1272D</color>
+
+    <color name="welcome_tagline_color">#737373</color>
 
     <color name="toolbar_title_color">#352B47</color>
     <color name="toolbar_background_color">#E1DAF0</color>
@@ -27,7 +29,7 @@
     <color name="input_field_stroke_focus_color">@color/primary_accent</color>
     <color name="input_field_stroke_color">@color/purple_200</color>
     <color name="input_field_text_color">@color/black</color>
-    <color name="input_field_label_color">@color/primary_accent</color>
+    <color name="input_field_label_color">#868686</color>
     <color name="input_hint_color">@color/purple_300</color>
 
     <color name="chip_text_selected_color">@color/white</color>
@@ -47,4 +49,10 @@
     <color name="store_listing_divider">@color/purple_200</color>
 
     <color name="control_background">#F0EAF6</color>
+    <color name="secondary_button_stroke">#67727E</color>
+
+    <color name="primary_text_color">#09110E</color>
+    <color name="secondary_text_color">#000</color>
+
+    <color name="forgot_password">#6A7781</color>
 </resources>

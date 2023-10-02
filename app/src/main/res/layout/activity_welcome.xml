@@ -5,19 +5,36 @@
     android:id="@+id/v_welcome_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_welcome"
+    android:background="@color/white"
     tools:theme="@style/Theme.Exclusive">
 
     <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/da_components_spacing_extreme_large_2"
-        android:layout_marginTop="@dimen/da_components_spacing_small"
+        android:layout_marginBottom="24dp"
+        android:text="@string/lbl_welcome_to"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:da_components_fontType="primary"
+        app:da_components_textWeight="bold"
+        app:layout_constraintBottom_toTopOf="@+id/iv_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.digitalawesome.dispensary.components.views.atoms.text.CustomFontTextView
+        android:id="@+id/customFontTextView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/da_components_spacing_extreme_large_2"
+        android:layout_marginTop="24dp"
         android:text="@string/welcome_tagline"
         android:textAlignment="center"
-        android:textColor="@color/purple_400"
+        android:textAllCaps="true"
+        android:textColor="@color/welcome_tagline_color"
         android:textSize="@dimen/da_components_text_size_16_sp"
-        app:da_components_fontType="primary"
+        app:da_components_fontType="secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
@@ -25,9 +42,9 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_icon"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_app_icon"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_app_icon_name_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +54,13 @@
     <com.digitalawesome.dispensary.components.views.atoms.buttons.PrimaryButton
         android:id="@+id/bt_getStarted"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="59dp"
         android:layout_margin="@dimen/da_components_spacing_large"
         android:scaleType="centerCrop"
         app:da_components_label="Get Started"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customFontTextView"
+        app:layout_constraintVertical_bias="0.85"
+        tools:layout_editor_absoluteX="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

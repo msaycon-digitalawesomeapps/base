@@ -1,19 +1,19 @@
 <resources>
-    <string name="app_name">Clear Choice</string>
+    <string name="app_name">Recweed</string>
 
-    <string name="signup_tos">By signing up, I agree to Clear Choice\'s</string>
+    <string name="signup_tos">By signing up, I agree to Recweed\'s</string>
     <string name="lbl_privacy">Privacy Policy</string>
     <string name="lbl_and">and</string>
     <string name="lbl_terms_service">Terms of Service.</string>
-    <string name="welcome_tagline">Make Clear Choice your first choice for cannabis.</string>
+    <string name="welcome_tagline">We produce our products with the highest quality ingredients and tried and true recipes</string>
     <string name="lbl_no">No</string>
     <string name="lbl_location_access">Location Access</string>
-    <string name="lbl_location_desc">Google Play Store requires that we check that you are in a legal state before we continue.\n\nPlease enable location services to use the app. We use your location to verify that you\'re in a state where cannabis is legal.</string>
-    <string name="lbl_login">Login</string>
+    <string name="lbl_location_desc">Google Play Store requires that we check that you are in a legal state before we continue.\n\nPlease enable location services to use the app.\n\nWe use your location to verify that you\'re in a state where cannabis is legal.</string>
+    <string name="lbl_login">Log in</string>
     <string name="lbl_email">Email</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_forgot_password">Forgot Password?</string>
-    <string name="lbl_not_member">Not a member?</string>
+    <string name="lbl_not_member">Don\'t have an account yet?</string>
     <string name="lbl_sign_up">Sign Up</string>
     <string name="lbl_register">Register</string>
     <string name="lbl_first_name">First Name</string>
@@ -22,7 +22,7 @@
     <string name="lbl_state">State</string>
     <string name="lbl_confirm_pass">Confirm Password</string>
     <string name="lbl_referal_code">Referral Code</string>
-    <string name="lbl_already_member">Already a Member?</string>
+    <string name="lbl_already_member">Already have an account?</string>
     <string name="lbl_opt_news">Opt in to our Newsletter(Not Required)</string>
     <string name="lbl_opt_text">Opt in to our Text Deals(Not Required)</string>
     <string name="lbl_reset_password">Reset Password</string>
@@ -44,4 +44,13 @@
     <string name="lbl_redeem">Redeem</string>
     <string name="lbl_details">Details</string>
     <string name="lbl_remove">Remove</string>
+    <string name="lbl_welcome_to">Welcome to</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_confirm">Confirm</string>
+    <string name="lbl_age_verification_desc">You must be at least 21 years old to enter this application.</string>
+    <string name="auth_tagline"><![CDATA[CONVENIENT, CONSISTENT, & NOW!]]></string>
+    <string name="lbl_create_account">Create an Account</string>
+    <string name="lbl_password_req_1">Your password must contain between 8 to 20 characters.</string>
+    <string name="lbl_password_req_2">"Your password must have at least 1 capital letter. "</string>
+    <string name="lbl_password_req_3">Your password must have at least 1 symbol.</string>
 </resources>

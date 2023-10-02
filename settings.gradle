@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Clear Choice"
+rootProject.name = "Rec Weed"
 include ':app',
         ':dispensary-domain-android',
         ':dispensary-components-android'

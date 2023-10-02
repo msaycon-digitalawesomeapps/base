@@ -60,8 +60,8 @@
         <item name="da_components_themeColorSecondaryButtonTextPressed">@color/primary_accent</item>
 
         <!-- TODO: Call to action button here -->
-        <item name="da_components_themeButtonCornerRadius">20dp</item>
-        <item name="da_components_themeColorSecondaryButton">@null</item>
+        <item name="da_components_themeButtonCornerRadius">@dimen/button_radius</item>
+        <item name="da_components_themeColorSecondaryButton">@color/secondary_button_stroke</item>
         <item name="da_components_themeColorLinkText">@color/primary_accent</item>
 
         <!-- Dropdown -->
@@ -125,9 +125,10 @@
         <item name="da_components_themeColorIconButtonTintDisabled">@color/da_components_gray_400
         </item>
 
-        <item name="da_components_themeColorTextPrimary">@color/black</item>
-        <item name="da_components_themeColorTextSecondary">@color/purple_300
+        <item name="da_components_themeColorTextPrimary">@color/primary_text_color</item>
+        <item name="da_components_themeColorTextSecondary">@color/secondary_text_color
         </item>
+        <item name="da_components_themeColorHeaderText">@color/primary_text_color</item>
 
         <!-- TextField -->
         <item name="da_components_themeColorTextFieldText">@color/input_field_text_color
@@ -219,11 +220,11 @@
     </style>
 
     <style name="Theme.Opt.Checkbox" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorControlNormal">@color/primary_accent
+        <item name="colorControlNormal">#4A4A4A
         </item>   <!-- normal border color change as you wish -->
-        <item name="colorControlActivated">@color/primary_accent
+        <item name="colorControlActivated">#4A4A4A
         </item> <!-- activated color change as you wish -->
-        <item name="android:textColor">@color/primary_accent</item> <!-- checkbox text color -->
+        <item name="android:textColor">#4A4A4A</item> <!-- checkbox text color -->
     </style>
 
     <style name="Theme.Clear.Choice.Chip" parent="@style/Widget.MaterialComponents.Chip.Choice">

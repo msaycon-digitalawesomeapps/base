@@ -38,7 +38,7 @@
 
         <fragment
             android:id="@+id/home"
-            android:name="com.digitalawesome.clearchoice.home.HomeFragment"
+            android:name="com.digitalawesome.recweed.home.HomeFragment"
             android:label="Home"
             tools:layout="@layout/fragment_home">
             <action
@@ -54,7 +54,7 @@
 
         <fragment
             android:id="@+id/product_details"
-            android:name="com.digitalawesome.clearchoice.home.product.ProductDetailsFragment"
+            android:name="com.digitalawesome.recweed.home.product.ProductDetailsFragment"
             android:label="Product Detail"
             tools:layout="@layout/fragment_product_details">
             <action
@@ -64,7 +64,7 @@
 
         <fragment
             android:id="@+id/product_search"
-            android:name="com.digitalawesome.clearchoice.home.search.SearchFragment"
+            android:name="com.digitalawesome.recweed.home.search.SearchFragment"
             android:label="Product Search"
             tools:layout="@layout/fragment_search">
 
@@ -78,19 +78,19 @@
 
         <fragment
             android:id="@+id/shopping_cart"
-            android:name="com.digitalawesome.clearchoice.home.cart.ShoppingCartFragment"
+            android:name="com.digitalawesome.recweed.home.cart.ShoppingCartFragment"
             android:label="Product Detail"
             tools:layout="@layout/fragment_shopping_cart"></fragment>
 
         <fragment
             android:id="@+id/stores"
-            android:name="com.digitalawesome.clearchoice.home.stores.StoresFragment"
+            android:name="com.digitalawesome.recweed.home.stores.StoresFragment"
             android:label="Stores"
             tools:layout="@layout/fragment_stores"></fragment>
 
         <fragment
             android:id="@+id/account"
-            android:name="com.digitalawesome.clearchoice.home.account.AccountFragment"
+            android:name="com.digitalawesome.recweed.home.account.AccountFragment"
             android:label="Account  "
             tools:layout="@layout/fragment_account">
 
@@ -98,13 +98,13 @@
 
         <fragment
             android:id="@+id/stores_with_search"
-            android:name="com.digitalawesome.clearchoice.home.stores.StoresWithSearchFragment"
+            android:name="com.digitalawesome.recweed.home.stores.StoresWithSearchFragment"
             android:label="Stores"
             tools:layout="@layout/fragment_stores_with_search"></fragment>
 
         <fragment
             android:id="@+id/profile"
-            android:name="com.digitalawesome.clearchoice.home.account.profile.ProfileFragment"
+            android:name="com.digitalawesome.recweed.home.account.profile.ProfileFragment"
             android:label="Profile"
             tools:layout="@layout/fragment_profile"></fragment>
 
